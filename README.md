@@ -2,16 +2,22 @@
 
 ## Usage
 
+`git clone <repo-url>`
+`cd <repo-name>`
+
+### to run:
+
 `g++ main.cpp -o <output-name> -lncurses`
+`./<output-name>`
 
-or any other c++ compiler
+or 
 
-to run: `./<output-name>`
-
+`make`
+`./anitype`
 
 ## TODO
 
-- [ ] Create a makefile
+- [x] Create a makefile
 - [ ] Implement basic typing test from a custom text file 
 - [ ] Display words per minute (WPM) after each test
 - [ ] Implment a timer based test 
