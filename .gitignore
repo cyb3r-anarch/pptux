@@ -3,7 +3,7 @@
 
 # Build artifacts
 /build/
-
+*.o
 
 # Ignore system-specific files
 .DS_Store
@@ -12,3 +12,4 @@ Thumbs.db
 # Ignore compiled binaries
 outDebug
 test
+anitype
