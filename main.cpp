@@ -6,8 +6,13 @@
 #include <iostream>
 #include <ncurses.h>
 #include <string.h>
+#include <fstream>
+#include <vector>
+#include <array>
+#include <string>
 
-const int WORD_COUNT = 6;
+std::string wordListPath;
+std::vector<std::string> wordList = {};
 
 
 void initializeNcurses(){
@@ -16,35 +21,43 @@ void initializeNcurses(){
 }
 
 void cleanupNcurses(){
-  endwin();// exits curses mode
   getch(); //wait for character input before exiting
+  endwin();// exits curses mode
 }
 
-void displayWords(const std::string words[], const int wordCount){
-  clear(); //Clears the screen before displaying 
-  for(int i = 0; i < wordCount; i++){
-    for(int j = 0; j < words[i].length();j++){
-      printw("%c",words[i][j]);
-      refresh(); //refreshes screen
-      getch(); //waits for a character input before proceeding
+void appendWordList(std::vector<std::string>& thisWordList, std::string wordFilePath){
+  std::string word;
+  std::ifstream wordlist("resources/wordlists/english");
+  if(wordlist.is_open())
+  {
+    while(getline(wordlist,word))
+    {
+      thisWordList.push_back(word);
     }
-    printw(" "); // adds space between the words
-    refresh();
+    wordlist.close();
+  }
+  else{
+    std::cout << "Error getting file" << std::endl;
+  }
+}
+
+void displayWords(std::vector<std::string> thisWordList){
+  // clear(); //Clears the screen before displaying 
+  move(10,0);
+  for(int i = 0; i < thisWordList.size(); i++){
+    printw("%s ",thisWordList[i].c_str());
   }
 }
 
 int main() {
   initializeNcurses();
+  wordListPath = "resources/wordlists/english";
 
-
-  //array of string for temporary example 
-  std::string words[6] = {"This", "is", "a", "typing","test","."}; 
-  displayWords(words,WORD_COUNT);
-
-  getch(); //wait for character input before exiting
+  appendWordList(wordList,wordListPath);
+  displayWords(wordList);
+  move(0,0);
+  getch();
   cleanupNcurses();
-
-
   return 0;
 }
 
