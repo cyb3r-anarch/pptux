@@ -1,4 +1,4 @@
-# ani-type
+# pptux
 
 ## Usage
 
