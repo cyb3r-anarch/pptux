@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++11
 LDFLAGS = -lncurses
 
 # Target executable
-TARGET = anitype
+TARGET = pptux
 
 # Source files
 SRCS = src/main.cpp src/ncurses_helper.cpp src/wordlist_helper.cpp
