@@ -3,6 +3,15 @@ pptux - Terminal Typing Program in C++
 </h1>
 
 <p align="center">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/cyb3r-anarch/pptux?style=for-the-badge">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/cyb3r-anarch/pptux?style=for-the-badge">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/cyb3r-anarch/pptux?style=for-the-badge">
+  <img alt="Bitbucket open issues" src="https://img.shields.io/github/issues/cyb3r-anarch/ppttux?style=for-the-badge">
+  <img alt="Bitbucket open pull requests" src="https://img.shields.io/bitbucket/pr-raw/cyb3r-anarch/pptux?style=for-the-badge">
+</p>
+
+
+<p align="center">
   <img src="demo.gif" alt="Demo">
 </p>
 
