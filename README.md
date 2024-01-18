@@ -20,7 +20,7 @@ pptux - Terminal Typing Program in C++
 
 ### Customization
 
-You can customize the wordlist used in the typing test by navigating to `resources/wordlists/english` and modifying the words in the file. Each word should be on a separate line with a space at the end.
+You can customize the wordlist used in the typing test by navigating to `resources/wordlists/english` and modifying the words in the file. **Each word should be on a separate line with a space at the end**.
 
 ## TODO
 
