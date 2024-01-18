@@ -1,4 +1,11 @@
-# pptux
+<h1 align="center">
+pptux - Terminal Typing Program in C++
+</h1>
+
+<p align="center">
+  <img src="demo.gif" alt="Demo">
+</p>
+
 
 ## Usage
 
@@ -9,7 +16,11 @@
 ### to run:
 
 `make`
-`./anitype`
+`./pptux`
+
+### Customization
+
+You can customize the wordlist used in the typing test by navigating to `resources/wordlists/english` and modifying the words in the file. Each word should be on a separate line with a space at the end.
 
 ## TODO
 
