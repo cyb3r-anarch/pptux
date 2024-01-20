@@ -25,6 +25,7 @@ pptux - Terminal Typing Program in C++
 ### to run:
 
 `make`
+
 `./pptux`
 
 ### Customization
